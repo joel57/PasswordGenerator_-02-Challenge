@@ -1,6 +1,5 @@
 // Assignment Code
-
-//Varibles that will hold info
+//Varibles that will save info
 var generateBtn = document.querySelector("#generate");
 var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -11,10 +10,20 @@ var uppercaseCheck;
 var numberCheck;
 var specialCheck;
 
+//Function for determining the passwords length
+function determineLegth(){
+  passwordLength = prompt("Choose how many characters long you'd like your password to be (between 8-128 characters): ");
+
+  if (passwordlegngth<8) {
+    alert("Password length must be a number between 8-128 characters");
+  }
+
+}
 
 
 
 
+//me:
 
 
 
