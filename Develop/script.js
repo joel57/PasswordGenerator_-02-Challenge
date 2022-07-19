@@ -54,20 +54,39 @@ return upperCaseCheck;
   return upperCaseCheck;
 
 }
+//Ask the user if they want numbers?
+function determineNumbers(){
+  numberCheck = prompt("Do you want to include numbers in your password? (Yes or No)");
+  numberCheck = numberCheck.toLowerCase();
 
+  if (numberCheck === null || numberCheck === ""){
+    alert("Can you plase answer Yes or No");
+    determineNumbers();
 
-console.log()
+  }else if (numberCheck === "yes" || numberCheck === "y"){
+    numberCheck = true;
+    return numberCheck;
 
+  }else if (numberCheck === "no" || numberCheck ==="n"){
+    numberCheck = false;
+    return numberCheck;
 
+  }else {
+    alert("Please answer Yes or No");
+  }
+  return numberCheck;
+}
 
-// Write password to the #password input
+console.log(numberCheck)
+
+/*/ Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
-}
+} 
 
 // Add event listener to generate button
-//generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword); */
